@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=Squada+One&display=swap');
+:root {
+    font-family: 'Squada One', cursive;
+    --color-bg-main: #1a0909;
+    --color-bg-header: #ffe4c4;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: var(--color-bg-main)
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-right: 45px;
+}
+
+ul {
+    color: aliceblue;
+}
+
+li {
+    padding: 30px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.header-ppal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-header);
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.button-common {
+    padding: 5px;
+    border-radius: 7px;
+}
