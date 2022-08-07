@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Palanquin+Dark&family=Squada+One&display=swap');
+
+:root {
+    font-family: 'Squada One', cursive;
+    --color-bg-main: #1a0909;
+    --color-bg-header: #A68574;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: var(--color-bg-main)
+}
+
+h1 {
+    font-family: 'Francois One', sans-serif; 
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+}
+
+h3, h4{
+    color: aliceblue;
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+}
+
+.header-ppal {
+    width: 100%;
+    background-color: var(--color-bg-header);
+    display: flex;
+    justify-content: space-around;
+}
+
+.perhaps {
+    width: 200px;
+    max-width: 100%;
+}
+
+.container-form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.button-common {
+    padding: 8px;
+    font-family: 'Francois One', sans-serif;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-register-container {
+    margin: 15px;
+    padding: 5px;
+    color: aliceblue;
+}
+
+#error-message-form {
+    display: none;
+    background-color: red;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.drinks-display {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.drink-space {
+    margin: 40px;
+    height: 150px;
+}
+
+p {
+    color: aliceblue;
+}

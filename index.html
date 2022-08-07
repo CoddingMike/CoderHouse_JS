@@ -5,48 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <script src="/scripts/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/3c2d9e14f7.js" crossorigin="anonymous"></script>
+    <title>WHISKY IN THE JAR</title>
 </head>
 
 <body>
     <header class="header-ppal">
+        <img src="/img/Perhaps.PNG" class="perhaps" alt="">
         <div>
-            <h1>Sitio en construccion</h1>
+            <h1>WHISKY IN THE JAR</h1>
         </div>
-        <form action="#" class="container-header">
+        <form action="#" class="container-form-header">
             <div>
-                <button type="button" class="button-common" onclick="logInOnPage()">Iniciar Sesion</button>
+                <a href="register.html">
+                <button type="button" class="button-common">Iniciar Sesion</button>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                <button type="button" class="button-common">Registrarse</button>
+                </a>
             </div>
         </form>
     </header>
-    <nav>
-        <ul class="conteiner">
-            <li>
-                <a href="">ESPIRITUOSAS</a>
-            </li>
-            <li>
-                <a href="">WHISKY</a>
-            </li>
-            <li>
-                <a href="">LICORES</a>
-            </li>
-            <li>
-                <a href="">GASEOSAS</a>
-            </li>
-            <li>
-                <a href="">JUGOS</a>
-            </li>
-            <li>
-                <a href="">ESPECIALES</a>
-            </li>
-        </ul>
-    </nav>
+    <main>
+        <section class="drinks-display">
+            <div class="drink-space">
+                <img src="/img/JamesonBlack.jpg" alt="" srcset="">
+            </div>
+            <div class="drink-space">           
+                <button type="button" class="button-common" onclick="showDetails()">Mostrar Detalles</button>
+                <div id="product-description">
+                    <p id="product-name"></p>
+                    <p id="product-variety"></p>
+                    <p id="product-category"></p>
+                    <p id="product-size"></p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-
-<footer>
-
-</footer>
 
 </html>
