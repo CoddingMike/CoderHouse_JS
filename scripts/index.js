@@ -3,11 +3,9 @@ const passwordForm = document.getElementById("password-register");
 const cleanButton = document.getElementById("clean-register-form");
 const sendButton = document.getElementById("sent-register-form");
 const errorDisplay = document.getElementById("error-message-form");
-const productDescription = document.getElementById("product-description");
-const productName = document.getElementById("product-name");
-const productVariety = document.getElementById("product-variety");
-const productCategory = document.getElementById("product-category");
-const productSize = document.getElementById("product-size");
+const buttonDetail = document.getElementById("detail-button");
+const productSelect = document.getElementById("product-details")
+const productSelection = document.getElementsByName("radio-select")
 
 function logInOnPage() {
 
@@ -42,19 +40,51 @@ function validatePass(password) {
     return password.length >= lengthMin;
 }
 
-function showDetails() {
-    productName.innerText = "Producto:  " + productLists[0].name;
-    productVariety.innerText = "Variedad: " + productLists[0].type;
-    productCategory.innerText = "Categoria: " + productLists[0].category;
-    productSize.innerText = "Presentacion: " + productLists[0].size;
+function itemSelection () { 
+let productSelector
+
+    productSelection.forEach(radio => {  
+        if (radio.checked) {
+            productSelector = radio.value;
+        }
+    });
+
+    for (let i = 0; i < productLists.length; i++) {
+        if (productLists[i].productCode == productSelector)
+        {
+            productSelect.innerHTML = "<p>" + productLists[i].name + "</p><p> Presentacion: " + productLists[i].size + "</p><p> Precio: $" + productLists[i].price + "</p>"
+        }
+    }
 }
 
 
 let productLists = [
     {
+        name: "Jameson Irish Whiskey",
+        size: "750cc",
+        productCode: "A001",
+        type: "Irish",
+        price: "1500"
+    },
+    {
         name: "Jameson Black Barrel",
         size: "750cc",
-        category: "Whisky",
+        productCode: "A002",
         type: "Irish",
+        price: "1700"
     },
+    {
+        name: "Jameson Caskmakes Stout Edition",
+        size: "750cc",
+        productCode: "A003",
+        type: "Irish",
+        price: "1900"
+    },
+    {
+        name: "Jameson Caskmakes IPA Edition",
+        size: "750cc",
+        productCode: "A004",
+        type: "Irish",
+        price: "1900"
+    }
 ]

@@ -31,18 +31,26 @@
         </form>
     </header>
     <main>
-        <section class="drinks-display">
-            <div class="drink-space">
-                <img src="/img/JamesonBlack.jpg" alt="" srcset="">
+        <section>
+            <div class="drinks-display">
+                <img src="/img/JamesonIrish.png" width="200" height="450" alt="" srcset="">            
+                <img src="/img/JamesonBlack.jpg" width="200" height="450" alt="" srcset="">
+                <img src="/img/JamesonIPA.jpg" width="200" height="450" alt="" srcset="">
+                <img src="/img/JamesonSTOUT.jpg" width="200" height="450" alt="" srcset="">
             </div>
-            <div class="drink-space">           
-                <button type="button" class="button-common" onclick="showDetails()">Mostrar Detalles</button>
-                <div id="product-description">
-                    <p id="product-name"></p>
-                    <p id="product-variety"></p>
-                    <p id="product-category"></p>
-                    <p id="product-size"></p>
-                </div>
+            <form name="choose-type" class="drinks-display">
+                <input type="radio" class="button-radio" name="radio-select" value="A001">
+                <input type="radio" class="button-radio" name="radio-select" value="A002">
+                <input type="radio" class="button-radio" name="radio-select" value="A003">
+                <input type="radio" class="button-radio" name="radio-select" value="A004">
+            </form>
+        </section>
+        <section>
+            <div class="drinks-display">
+                <button type:="button" class="button-common" id="detail-button" onclick="itemSelection()">Mostrar Detalles</button>
+            </div>
+            <div class="drinks-detail" id="product-details">
+                
             </div>
         </section>
     </main>

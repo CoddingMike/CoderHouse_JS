@@ -36,6 +36,10 @@ h3, h4{
     text-align: center;
 }
 
+P {
+    color: aliceblue;
+}
+
 .header-ppal {
     width: 100%;
     background-color: var(--color-bg-header);
@@ -87,18 +91,27 @@ h3, h4{
     border-radius: 12px;
 }
 
+img {
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .drinks-display {
-    flex-basis: 50%;
     display: flex;
+    align-content: space-around;
     justify-content: center;
-    align-content: space-between;
+}
+.drinks-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.drink-space {
-    margin: 40px;
-    height: 150px;
+input {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;;
 }
 
-p {
-    color: aliceblue;
-}
+
