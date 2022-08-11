@@ -38,6 +38,7 @@ h3, h4{
 
 P {
     color: aliceblue;
+    text-align: center;
 }
 
 .header-ppal {
@@ -50,6 +51,7 @@ P {
 .perhaps {
     width: 200px;
     max-width: 100%;
+    margin-top: 0px;
 }
 
 .container-form-header {
@@ -66,29 +68,48 @@ P {
     margin: 5px;
 }
 
-.section-container {
+.section-forms-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.register-container {
+.login-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
-.form-register-container {
-    margin: 15px;
-    padding: 5px;
+.register-login-form {
     color: aliceblue;
 }
 
-#error-message-form {
+.common-input {
+    padding: 4px;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+#login-error-message {
+    width: 250px;
     display: none;
     background-color: red;
     padding: 15px;
     border-radius: 12px;
+    color: aliceblue;
+}
+
+#clean-login-form {
+    margin: 20px;
+}
+
+#sent-login-form {
+    margin-left: auto;
 }
 
 img {

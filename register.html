@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="/styles/index.css">
     <script src="/scripts/index.js" defer></script>
     <script src="https://kit.fontawesome.com/3c2d9e14f7.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>WHISKY IN THE JAR</title>
 </head>
 
 <body>
     <header class="header-ppal">
         <img src="/img/Perhaps.PNG" class="perhaps" alt="">
         <div>
-            <h1>SCENE MISSING</h1>
-            <H2>Almacen de bebidas</H2>
+            <h1>WHISKY IN THE JAR</h1>
         </div>
         <form action="#" class="container-form-header">
             <div>
@@ -27,30 +26,58 @@
         </form>
     </header>
     <main>
-        <section class="section-container">
-            <form action="#" class="register-container">
-                <div>
-                    <h3>Formulario de registro</h3>
+        <section class="section-forms-container">
+            <form action="#" class="login-container">
+                <h3>Inicio de Sesion</h3>
+                <div class="register-login-form">
+                    <label for="login-email">E-mail:</label>
+                    <input class="common-input" type="text" name="login-email" id="login-email">
                 </div>
-                <div class="form-register-container">
-                    <label for="email-register">E-mail:</label>
-                    <input class="" type="text" name="email-register" id="email-register">
+                <div class="register-login-form">
+                    <label for="login-password">Contraseña:</label>
+                    <input class="common-input" type="password" name="login-password" id="login-password">
                 </div>
-                <div class="form-register-container">
-                    <label for="password-register">Contraseña:</label>
-                    <input class="" type="password" name="password-register" id="password-register">
+                <div class="register-login-form">
+                    <button class="button-common" type="button" id="clean-login-form" onclick="alerta()">Limpiar</button>
+                    <button class="button-common" type="button" id="sent-login-form">Enviar</button>
                 </div>
-                <div class="form-register-container">
-                    <button class="button-common" type="button" id="clean-register-form" onclick="cleanForm()">Limpiar</button>
-                    <button class="button-common" type="button" id="sent-register-form" onclick="logInOnPage()" >Enviar</button>
-                </div>
-                <div class="form-register-container">
-                    <p class="common-alert" id="error-message-form">Existen errores en el formulario</p>
+                <div class="register-login-form">
+                    <p class="common-alert" id="login-error-message"></p>
                 </div>
             </form>
+            
             <form action="#">
+                    <h3>Formulario de registro</h3>
 
+                <div class="register-login-form">
+                    <label for="email-register">E-mail:</label>
+                    <input class="common-input" type="text" name="email-register" id="email-register">
+                </div>
+                <div class="register-login-form">
+                    <label for="password-register">Contraseña:</label>
+                    <input class="common-input" type="password" name="pasword-register" id="password-register">
+                </div>
+                <div class="register-login-form">
+                    <label for="name-register">Nombre:</label>
+                    <input class="common-input" type="text" name="name-register" id="name-register">
+                </div>
+                <div class="register-login-form">
+                    <label for="lastname-register">Apellido:</label>
+                    <input class="common-input" type="text" name="lastname-register" id="lastname-register">
+                </div>
+                <div class="register-login-form">
+                    <label for="direction-register">Direccion:</label>
+                    <input class="common-input" type="text" name="direction-register" id="direction-register">
+                </div>
+                <div class="register-login-form">
+                    <button class="button-common" type="button" id="clean-register-form">Limpiar</button>
+                    <button class="button-common" type="button" id="sent-register-form">Enviar</button>
+                </div>
+                <div class="register-login-form">
+                    <p class="common-alert" id="error-message-form"></p>
+                </div>
             </form>
+
         </section>
     </main>
 </body>

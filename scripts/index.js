@@ -1,36 +1,33 @@
-const emailForm = document.getElementById("email-register");
-const passwordForm = document.getElementById("password-register");
-const cleanButton = document.getElementById("clean-register-form");
-const sendButton = document.getElementById("sent-register-form");
-const errorDisplay = document.getElementById("error-message-form");
-const buttonDetail = document.getElementById("detail-button");
-const productSelect = document.getElementById("product-details")
-const productSelection = document.getElementsByName("radio-select")
+const emailLogInForm = document.getElementById("login-email");
+const passLogInForm = document.getElementById("login-password");
+const cleanLogInButton = document.getElementById("clean-login-form");
+const sendLogInButton = document.getElementById("sent-login-form");
+const logInErrorDisplay = document.getElementById("login-error-message");
+const buttonDetail = document.getElementById("display-details");
+const productSelect = document.getElementById("product-details");
+const productSelection = document.getElementsByName("radio-select");
 
+sendLogInButton.addEventListener("click", logInOnPage);
 function logInOnPage() {
 
-let emailUser = emailForm.value;
-let passwordUser = passwordForm.value;
+let emailUser = emailLogInForm.value;
+let passwordUser = passLogInForm.value;
 
     if (!validatEmail(emailUser)) {
-        errorDisplay.style.display="block";
-        emailForm.value="";
+        logInErrorDisplay.style.display="block";
+        logInErrorDisplay.innerText = "Debe ingresar un email valido";
+        emailLogInForm.value="";
         return;
     }
     if (!validatePass(passwordUser)) {
-        errorDisplay.style.display="block";
-        passwordForm.value="";
+        logInErrorDisplay.style.display="block";
+        logInErrorDisplay.innerText = "La contraseña debe tener mas de 8 digitos";
+        passLogInForm.value="";
         return;
     }
 }
 
-function cleanForm() {
-    emailForm.value = "";
-    passwordForm.value="";
-    errorDisplay.style.display="none";
-}
-
-function validatEmail(email) {
+function validatEmail (email) {
     regExpresion = /\S+@\S+\.\S+/
     return regExpresion.test(email);
 }
@@ -40,51 +37,73 @@ function validatePass(password) {
     return password.length >= lengthMin;
 }
 
-function itemSelection () { 
-let productSelector
+cleanLogInButton.addEventListener("click", cleanForm);
+function cleanForm() {
+    emailLogInForm.value = "";
+    passLogInForm.value= "";
+    logInErrorDisplay.style.display="none";
+}
 
+function itemSelection() { 
+let productSelector
+    
     productSelection.forEach(radio => {  
         if (radio.checked) {
             productSelector = radio.value;
         }
     });
-
-    for (let i = 0; i < productLists.length; i++) {
-        if (productLists[i].productCode == productSelector)
-        {
-            productSelect.innerHTML = "<p>" + productLists[i].name + "</p><p> Presentacion: " + productLists[i].size + "</p><p> Precio: $" + productLists[i].price + "</p>"
+    
+    for (let i = 0; i < productList.length; i++) {
+        if (productList[i].productCode == productSelector) {
+            productSelect.innerHTML = "<p>" + productList[i].name + "</p><p> Presentacion: " + productList[i].size + "</p><p> Precio: $" + productList[i].price + "</p>"
         }
     }
 }
 
-
-let productLists = [
+let productList = [
     {
         name: "Jameson Irish Whiskey",
         size: "750cc",
         productCode: "A001",
         type: "Irish",
-        price: "1500"
+        price: "1500",
     },
     {
         name: "Jameson Black Barrel",
         size: "750cc",
         productCode: "A002",
         type: "Irish",
-        price: "1700"
+        price: "1700",
     },
     {
         name: "Jameson Caskmakes Stout Edition",
         size: "750cc",
         productCode: "A003",
         type: "Irish",
-        price: "1900"
+        price: "1900",
     },
     {
         name: "Jameson Caskmakes IPA Edition",
         size: "750cc",
         productCode: "A004",
         type: "Irish",
-        price: "1900"
+        price: "1900",
+    }
+]
+
+const registerUsers = [
+    {
+        email: "maxi_faggiani@hotmail.com",
+        password: "miraLaContraseña",
+        nombre: "Maximiliano",
+        apellido: "Faggiani",
+        direccion: "Cafferata 972"
+    },
+    {
+        email: "pedro_rodriguez@hotmail.com",
+        password: "holaSoyPedro",
+        nombre: "Pedro",
+        apellido: "Rodriguez",
+        direccion: "Ovidio Lagos 1533"
     }
 ]
