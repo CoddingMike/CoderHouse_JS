@@ -1,3 +1,5 @@
+import { productList } from "./products.js";
+
 const emailLogInForm = document.getElementById("login-email");
 const passLogInForm = document.getElementById("login-password");
 const cleanLogInButton = document.getElementById("clean-login-form");
@@ -7,8 +9,7 @@ const buttonDetail = document.getElementById("display-details");
 const productSelect = document.getElementById("product-details");
 const productSelection = document.getElementsByName("radio-select");
 
-sendLogInButton.addEventListener("click", logInOnPage);
-function logInOnPage() {
+const logInOnPage = () => {
 
 let emailUser = emailLogInForm.value;
 let passwordUser = passLogInForm.value;
@@ -36,15 +37,17 @@ function validatePass(password) {
     const lengthMin = 8;
     return password.length >= lengthMin;
 }
+sendLogInButton.addEventListener("click", logInOnPage);
 
-cleanLogInButton.addEventListener("click", cleanForm);
-function cleanForm() {
+
+const cleanForm = () => {
     emailLogInForm.value = "";
     passLogInForm.value= "";
     logInErrorDisplay.style.display="none";
 }
+cleanLogInButton.addEventListener("click", cleanForm);
 
-function itemSelection() { 
+const itemSelection = () => { 
 let productSelector
     
     productSelection.forEach(radio => {  
@@ -60,50 +63,4 @@ let productSelector
     }
 }
 
-let productList = [
-    {
-        name: "Jameson Irish Whiskey",
-        size: "750cc",
-        productCode: "A001",
-        type: "Irish",
-        price: "1500",
-    },
-    {
-        name: "Jameson Black Barrel",
-        size: "750cc",
-        productCode: "A002",
-        type: "Irish",
-        price: "1700",
-    },
-    {
-        name: "Jameson Caskmakes Stout Edition",
-        size: "750cc",
-        productCode: "A003",
-        type: "Irish",
-        price: "1900",
-    },
-    {
-        name: "Jameson Caskmakes IPA Edition",
-        size: "750cc",
-        productCode: "A004",
-        type: "Irish",
-        price: "1900",
-    }
-]
-
-const registerUsers = [
-    {
-        email: "maxi_faggiani@hotmail.com",
-        password: "miraLaContraseña",
-        nombre: "Maximiliano",
-        apellido: "Faggiani",
-        direccion: "Cafferata 972"
-    },
-    {
-        email: "pedro_rodriguez@hotmail.com",
-        password: "holaSoyPedro",
-        nombre: "Pedro",
-        apellido: "Rodriguez",
-        direccion: "Ovidio Lagos 1533"
-    }
-]
+buttonDetail.addEventListener("click", itemSelection)
