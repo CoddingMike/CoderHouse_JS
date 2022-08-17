@@ -8,6 +8,16 @@ const logInErrorDisplay = document.getElementById("login-error-message");
 const buttonDetail = document.getElementById("display-details");
 const productSelect = document.getElementById("product-details");
 const productSelection = document.getElementsByName("radio-select");
+const scotchWhisky = document.getElementById("scotch-whisky");
+const bourbonWhisky = document.getElementById("bourbon-whisky");
+const irishWhisky = document.getElementById("irish-whisky");
+const ryeWhisky = document.getElementById("rye-whisky");
+
+scotchWhisky.addEventListener("click", prueba);
+
+function prueba() {
+    alert("Tocaste Scotch");
+}
 
 const logInOnPage = () => {
 
