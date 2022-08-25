@@ -84,6 +84,12 @@ ul {
     border-bottom: 2px solid white;
 }
 
+.price-item, .description-item {
+    font-family: 'Vast Shadow', cursive, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    padding: 15px;
+}
+
 .button-type {
     padding: 5px 10px;
     background-color: var(--color-bg-main);
@@ -105,6 +111,11 @@ ul {
     align-self: center;
     margin: 10px;
     width: 100px;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    font-family: rye, cursive;
 }
 
 .image-product-style{
