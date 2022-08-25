@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
-    <script src="/scripts/index.js" defer></script>
-    <script src="/scripts/products.js" type="module"></script>
+    <script src="/scripts/index.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/3c2d9e14f7.js" crossorigin="anonymous"></script>
     <title>WHISKY IN THE JAR</title>
 </head>
@@ -37,34 +36,27 @@
     <main>
         <nav>
             <ul class="categories-container">
-                <li><a href="#" id="scotch-whisky">Scotch</a></li>
-                <li><a href="#" id="bourbon-whisky">Bourbon</a></li>
-                <li><a href="#" id="irish-whisky">Irish</a></li>
-                <li><a href="#" id="rye-whisky">Rye</a></li>
+                <li><button id="scotch-whisky" class="button-type">Scotch</button></li>
+                <li><button id="bourbon-whisky" class="button-type">Bourbon</button></li>
+                <li><button id="irish-whisky" class="button-type">Irish</button></li>
+                <li><button id="rye-whisky" class="button-type">Rye</button></li>
             </ul>
         </nav>
-        <section>
-            <div class="drinks-display">
-                <img src="/img/JamesonIrish.png" width="200" height="450" alt="" srcset="">            
-                <img src="/img/JamesonBlack.jpg" width="200" height="450" alt="" srcset="">
-                <img src="/img/JamesonIPA.jpg" width="200" height="450" alt="" srcset="">
-                <img src="/img/JamesonSTOUT.jpg" width="200" height="450" alt="" srcset="">
+        <section class="product-container">
+            <div class="product-detail" id="product-number1">
+
             </div>
-            <form name="choose-type" class="drinks-display">
-                <input type="radio" class="button-radio" name="radio-select" value="A001">
-                <input type="radio" class="button-radio" name="radio-select" value="A002">
-                <input type="radio" class="button-radio" name="radio-select" value="A003">
-                <input type="radio" class="button-radio" name="radio-select" value="A004">
-            </form>
-        </section>
-        <section>
-            <div class="drinks-display">
-                <button type="button" class="button-common" id="display-details">Mostrar Detalles</button>
+            <div class="product-detail" id="product-number2">
+
             </div>
-            <div class="drinks-detail" id="product-details">
-                
+            <div class="product-detail" id="product-number3">
+  
+            </div>
+            <div class="product-detail" id="product-number4">
+  
             </div>
         </section>
+
     </main>
 </body>
 

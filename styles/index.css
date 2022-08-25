@@ -69,7 +69,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .cart-container {
@@ -79,12 +78,38 @@ ul {
 }
 
 .categories-container {
-    color: white;
     display: flex;
     justify-content:space-around;
     background-color: var(--color-bg-main);
-    padding: 8px;
     border-bottom: 2px solid white;
+}
+
+.button-type {
+    padding: 5px 10px;
+    background-color: var(--color-bg-main);
+    color: white;
+    font-family: 'Vast Shadow', cursive, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+.product-container {
+    display: grid;
+    margin: 25px;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.button-selection {
+    align-self: center;
+    margin: 10px;
+    width: 100px;
+}
+
+.image-product-style{
+    width: fit-content;
+    height: fit-content;
 }
 
 .button-common {
