@@ -19,36 +19,36 @@ const buttonItem = "<button class='button-selection'><i class='fa-solid fa-cart-
 
 const scotishSelection = () => {
 for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + descriptionItem + priceItem + "<img src='/img/NODISP.JPG'" + classImage + buttonItem;
+        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
         titleSelection[i].innerText = productSingleMaltWhisky[i].name;
-        descriptionSelect[i].innerText = "Tamaño:" + productSingleMaltWhisky[i].size;
+        descriptionSelect[i].innerText = "Presentacion: " + productSingleMaltWhisky[i].size;
         priceItemSelect[i].innerText = "Precio: " + productSingleMaltWhisky[i].price;
     }  
 }
 
 const blendedSelection = () => {
     for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + descriptionItem + priceItem + "<img src='/img/NODISP.JPG'" + classImage + buttonItem;
+        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
         titleSelection[i].innerText = productBlendedWhisky[i].name;
-        descriptionSelect[i].innerText = "Tamaño:" + productBlendedWhisky[i].size;
+        descriptionSelect[i].innerText = "Presentacion: " + productBlendedWhisky[i].size;
         priceItemSelect[i].innerText = "Precio: " + productBlendedWhisky[i].price;
     }  
 }
 
 const buorbonSelection = () => {
     for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + descriptionItem + priceItem + "<img src='/img/NODISP.JPG'" + classImage + buttonItem;
+        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
         titleSelection[i].innerText = productBourbonWhisky[i].name;
-        descriptionSelect[i].innerText = "Tamaño:" + productBourbonWhisky[i].size;
+        descriptionSelect[i].innerText = "Presentacion: " + productBourbonWhisky[i].size;
         priceItemSelect[i].innerText = "Precio: " + productBourbonWhisky[i].price;
     }  
 }
 
 const irishSelection = () => {
     for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + descriptionItem + priceItem + "<img src='/img/NODISP.JPG'" + classImage + buttonItem;
+        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
         titleSelection[i].innerText = productIrishWhisky[i].name;
-        descriptionSelect[i].innerText = "Tamaño:" + productIrishWhisky[i].size;
+        descriptionSelect[i].innerText = "Presentacion: " + productIrishWhisky[i].size;
         priceItemSelect[i].innerText = "Precio: " + productIrishWhisky[i].price;
     }  
 }

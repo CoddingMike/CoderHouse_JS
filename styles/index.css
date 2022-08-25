@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;1,300&family=Rye&family=Vast+Shadow&display=swap');
 
 * {
     box-sizing: border-box;
@@ -28,7 +28,7 @@ h2 {
     text-align: center;
 }
 
-h3, h4, a{
+h3, h4 {
     color: aliceblue;
     font-family: 'Vast Shadow', cursive, Arial, Helvetica, sans-serif;
     text-align: center;
@@ -107,6 +107,7 @@ ul {
     flex-direction: column;
     align-content: center;
 }
+
 .button-selection {
     align-self: center;
     margin: 10px;
@@ -114,13 +115,19 @@ ul {
 }
 
 .item-title {
-    font-size: 0.9rem;
-    font-family: rye, cursive;
+    font-family: 'Averia Libre', cursive;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.description-item, .price-item {
+    font-family: 'Averia Libre', cursive;
+    font-size: 1rem;
 }
 
 .image-product-style{
     width: fit-content;
     height: fit-content;
+    padding: 5px;
 }
 
 .button-common {
@@ -128,74 +135,7 @@ ul {
     padding: 5px;
     border-radius: 5px;
     margin: 5px;
-    font-family: rye, cursive;
-}
-
-.section-forms-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.register-login-form {
-    color: aliceblue;
-}
-
-.common-input {
-    padding: 4px;
-    border-radius: 5px;
-}
-
-label {
-    display: inline-block;
-    width: 50px;
-}
-
-#login-error-message {
-    width: 250px;
-    display: none;
-    background-color: red;
-    padding: 15px;
-    border-radius: 12px;
-    color: aliceblue;
-}
-
-#clean-login-form {
-    margin: 20px;
-}
-
-#sent-login-form {
-    margin-left: auto;
-}
-
-img {
-    margin-top: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.drinks-display {
-    display: flex;
-    align-content: space-around;
-    justify-content: center;
-}
-.drinks-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;;
+    font-family: "rye", cursive;
 }
 
 

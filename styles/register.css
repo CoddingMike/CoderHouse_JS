@@ -1,0 +1,80 @@
+.categories-title-container {
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 2px solid white;
+}
+
+.categories-title {
+    padding: 7px;
+    color: white;
+    font-family: 'Vast Shadow', cursive, Arial, Helvetica, sans-serif;
+}
+
+.section-forms-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.common-input {
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+label {
+    width: 75px;
+    display: inline-block;
+    font-family: 'Averia Libre';
+}
+
+.login-button-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.login-button {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px;
+    font-family: "rye", cursive;
+}
+
+.login-alert {
+    width: 250px;
+    display: none;
+    background-color: red;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Averia Libre';
+}
+
+.register-container {
+    margin: 25px;
+}
+.register-form {
+    display: flex;
+    color: white;
+}
+
+
+
+input {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;;
+}
