@@ -73,6 +73,5 @@ const cleanForm = () => {
     logInErrorDisplay.style.display="none";
 }
 
-
 sendLogInButton.addEventListener("click", logInOnPage);
 cleanLogInButton.addEventListener("click", cleanForm);

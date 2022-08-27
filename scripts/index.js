@@ -7,50 +7,66 @@ const scotchWhisky = document.getElementById("scotch-whisky");
 const blendedWhisky = document.getElementById("blended-whisky");
 const bourbonWhisky = document.getElementById("bourbon-whisky");
 const irishWhisky = document.getElementById("irish-whisky");
-const productSelection = document.getElementsByClassName("product-detail");
-const titleSelection = document.getElementsByClassName("item-title");
-const descriptionSelect = document.getElementsByClassName("description-item");
-const priceItemSelect = document.getElementsByClassName("price-item");
-const titleItem = "<h4 class='item-title'></h4>";
-const descriptionItem = "<p class='description-item'></p>";
-const priceItem = "<p class='price-item'></p>";
-const classImage = "class='image-product-style'>";
-const buttonItem = "<button class='button-selection'><i class='fa-solid fa-cart-plus'></i></button>";
+const productDisplay = document.getElementById("product-display-Id");
+let producType = "";
 
 const scotishSelection = () => {
-for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
-        titleSelection[i].innerText = productSingleMaltWhisky[i].name;
-        descriptionSelect[i].innerText = "Presentacion: " + productSingleMaltWhisky[i].size;
-        priceItemSelect[i].innerText = "Precio: " + productSingleMaltWhisky[i].price;
-    }  
+    producType = productSingleMaltWhisky;
+    if (productDisplay.hasChildNodes()) {
+        cleaNodes(productDisplay);
+    }
+    productDisplayFunction()
 }
 
 const blendedSelection = () => {
-    for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
-        titleSelection[i].innerText = productBlendedWhisky[i].name;
-        descriptionSelect[i].innerText = "Presentacion: " + productBlendedWhisky[i].size;
-        priceItemSelect[i].innerText = "Precio: " + productBlendedWhisky[i].price;
-    }  
+    producType = productBlendedWhisky;
+    if (productDisplay.hasChildNodes()) {
+        cleaNodes(productDisplay);
+    }
+    productDisplayFunction()
 }
 
 const buorbonSelection = () => {
-    for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
-        titleSelection[i].innerText = productBourbonWhisky[i].name;
-        descriptionSelect[i].innerText = "Presentacion: " + productBourbonWhisky[i].size;
-        priceItemSelect[i].innerText = "Precio: " + productBourbonWhisky[i].price;
-    }  
+    producType = productBourbonWhisky;
+    if (productDisplay.hasChildNodes()) {
+        cleaNodes(productDisplay);
+    }
+    productDisplayFunction()
 }
 
 const irishSelection = () => {
-    for (let i = 0; i < 4; i++) {
-        productSelection[i].innerHTML = titleItem + "<img src='/img/NODISP.JPG'" + classImage + descriptionItem + priceItem + buttonItem;
-        titleSelection[i].innerText = productIrishWhisky[i].name;
-        descriptionSelect[i].innerText = "Presentacion: " + productIrishWhisky[i].size;
-        priceItemSelect[i].innerText = "Precio: " + productIrishWhisky[i].price;
-    }  
+    producType = productIrishWhisky;
+    if (productDisplay.hasChildNodes()) {
+        cleaNodes(productDisplay);
+    }
+    productDisplayFunction()
+}
+
+const cleaNodes = (list) => {
+    while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+    }
+}
+
+const productDisplayFunction = () => {
+    producType.map((products) => {
+        const { name, size, image, price, productCode } = products;
+
+        const display = document.createElement("div");
+        display.className = "product-detail";
+
+        display.innerHTML = `
+            <h4 class="item-title">${name} </h4>
+            <img src=${image} class="image-product-style">  
+            <p class="description-item">${size}</p>
+            <p class="price-item">${price}</p>
+            <button class="button-selection"
+                <i class="fa-solid fa-cart-plus"></i> 
+            </button>
+        `;
+
+        productDisplay.append(display);
+    });
 }
 
 scotchWhisky.addEventListener("click", scotishSelection);
