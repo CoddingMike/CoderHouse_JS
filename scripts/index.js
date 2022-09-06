@@ -60,8 +60,8 @@ const productDisplayFunction = () => {
             <img src=${image} class="image-product-style">  
             <p class="description-item">${size}</p>
             <p class="price-item">${price}</p>
-            <button class="button-selection"
-                <i class="fa-solid fa-cart-plus"></i> 
+            <button class="button-selection" id="${productCode}"
+                '<i class="fa-solid fa-cart-plus"></i>' 
             </button>
         `;
 
